@@ -1,0 +1,59 @@
+.Login-style{
+    align-items: center;
+    margin-top: 40px;
+}
+
+.Login-button{
+    margin-right: 40px;
+}
+
+.Footer-style{
+
+    background-color: black;
+    color: white; 
+    padding: 30px;
+
+    
+}
+
+.Header-style{
+
+    background-color: black;
+    color: white; 
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    
+}
+
+.left{
+    display: inline;
+    text-align: left;
+}
+
+.right{
+    display: flex;
+    margin-left: auto;
+    margin-right: 60px;
+    justify-content: space-between;
+    padding-right: 20px;
+
+}
+
+
+.Footer-style{
+
+        margin-top: 395px;
+}
+
+.right div{
+    padding-right: 20px;
+}
+
+.Error{
+
+    color: red;
+    font-size: 30px;
+    margin-top: 60px
+
+}
