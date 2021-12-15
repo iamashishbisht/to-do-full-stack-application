@@ -1,14 +1,20 @@
 import React from 'react'
+import '../Styling/Style.css'
 
 const Todo=()=>{
     
     return(
         <>
-        <table>
+        <table className='tableStyle'>
             <tbody>
+            <tr >
+                <th colSpan="3">
+                    TO DO LIST
+                </th>
+            </tr>
             <tr>
                 <th>
-                    description
+                    Description
                 </th>
                 <th>
                     time
@@ -21,9 +27,9 @@ const Todo=()=>{
                 <td>
                     Learn React
                 </td>
-                {/* <td>
-                    {new Date()}
-                </td> */}
+                <td>
+                    {`${new Date().getDate()}/${new Date().getMonth()}/${new Date().getFullYear()}`}
+                </td>
                 <td>
                     In progress
                 </td>
@@ -32,9 +38,9 @@ const Todo=()=>{
                 <td>
                     Learn JAVA
                 </td>
-                {/* <td>
-                    {new Date()}
-                </td> */}
+                <td>
+                    {`${new Date().getDate()}/${new Date().getMonth()}/${new Date().getFullYear()}`}
+                </td>
                 <td>
                     Yes
                 </td>
@@ -44,7 +50,7 @@ const Todo=()=>{
                     Learn MongoDB
                 </td>
                 <td>
-                    {(new Date()).toString}
+                    {`${new Date().getDate()}/${new Date().getMonth()}/${new Date().getFullYear()}`}
                 </td>
                 <td>
                     No

@@ -1,8 +1,11 @@
+import { Link } from "react-router-dom"
 import "../Styling/Style.css"
+import AuthenticationService from "./AuthenticationService"
 
 const Header =()=>{
-                    return(
-                            <>
+       
+   let isLoggedIn = AuthenticationService.IsUserLoggedIn();
+                    return <>
                             {/* <div className='Header-style'>
                             <span className="left">Home</span>
                             <span className="right">
@@ -11,16 +14,19 @@ const Header =()=>{
                             </span>
                             </div> */}
                              <div className='Header-style'>
-                                <div className="left">Home</div>
+                                <div className="left">
+                                    <div><Link to='/'>Home  </Link></div>
+                                    <div> <Link to='/todo'> todo</Link></div>
+                                 </div>
+
                                 <div className="right">
-                                <div>Login  </div>  
-                                 <div>Logout</div>
+                                    <div><Link to='/login'>Login  </Link></div>  
+                                    {isLoggedIn && <div><Link to='/logout' >Logout</Link></div>}
                                 </div>
                              </div> 
- 
                             </>
 
-                    )
+                    
 
 }
 

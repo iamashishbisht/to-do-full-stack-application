@@ -6,19 +6,38 @@ import Welcome from './Components/Welcome';
 import Todo from './Components/Todo';
 import ErrorPage from './Components/ErrorPage';
 import {BrowserRouter , Route, Routes, Link} from 'react-router-dom'
+import { useState,useEffect } from 'react';
+import Logout from './Components/Logout';
+import Home from './Components/Home';
+import AuthenticatedRoute from './Components/AuthenticatedRoute';
 
 function App() {
+
+  //const [state , setState] = useState('false') 
+
+  useEffect(() => {
+    // Update the document title using the browser API
+    console.log('upadated');
+    document.title = `updated the component`;
+  });
+
   return (
     <div className="App">
-     
-      <Header/>
-    
       <BrowserRouter>
+      <Header/>
       <Routes>
-        <Route path = '/'  element={<Login/>}/>
-        <Route path = '/welcome' element={<Welcome/>}/>
+        <Route path = '/'  element={<Home/>}/>
+        <Route path = '/login'  element={<Login/>}/>
+        <Route path = '/welcome/:name' element={<AuthenticatedRoute returnComponent={Welcome}/>}/>
+        <Route path = '/todo' element={<AuthenticatedRoute returnComponent={Todo}/>}/> 
+        <Route path = '*' element={<AuthenticatedRoute returnComponent={ErrorPage}/>}/> 
+        <Route path = '/logout' element={<AuthenticatedRoute returnComponent={Logout}/>}/>
+        {/* <Route path = '/'  element={<Home/>}/>
+        <Route path = '/login'  element={<Login/>}/>
+        <Route path = '/welcome/:name' element={<Welcome/>}/>
         <Route path = '/todo' element={<Todo/>}/> 
         <Route path = '*' element={<ErrorPage/>}/> 
+        <Route path = '/logout' element={<Logout/>}/> */}
       </Routes>
       </BrowserRouter>
 

@@ -27,8 +27,12 @@
 }
 
 .left{
-    display: inline;
-    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    margin-right: auto;
+    margin-left: 60px;
+    padding-left: 20px;
+    
 }
 
 .right{
@@ -50,10 +54,25 @@
     padding-right: 20px;
 }
 
+.left div{
+    padding-right: 20px;
+    
+}
+
+
 .Error{
 
     color: red;
     font-size: 30px;
     margin-top: 60px
+
+}
+
+.tableStyle,td,th{
+    margin-top: 40px;
+    margin-left: 100px;
+    border-style: solid;
+    text-align: center;
+    padding: 3px;
 
 }

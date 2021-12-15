@@ -1,1 +1,0 @@
-A full stack application with frontent on React and Backend on java
